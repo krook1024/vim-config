@@ -96,6 +96,17 @@
       \ 'py=python'
       \ ]
 
+
+# LaTeX related
+- repo: 'lervag/vimtex'
+  on_ft: ['tex']
+  hook_add: |-
+    let g:tex_flavor='latex'
+    let g:vimtex_view_method='zathura'
+    let g:vimtex_quickfix_mode=0
+    set conceallevel=1
+    let g:tex_conceal='abdmg'
+
 # Javascript related
 - repo: pangloss/vim-javascript
   on_ft: [ javascript, javascriptreact ]
@@ -580,10 +591,10 @@
   if: has('python3')
   on_event: FileType
   hook_add: |-
-    let g:UltiSnipsExpandTrigger = '<C-l>'
-    let g:UltiSnipsListSnippets = '<C-Tab>'
-    let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-    let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+    let g:UltiSnipsExpandTrigger = '<tab>'
+    let g:UltiSnipsListSnippets = '<tab>'
+    let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 - repo: honza/vim-snippets
   depends: ultisnips
